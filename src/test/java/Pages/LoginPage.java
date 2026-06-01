@@ -1,22 +1,45 @@
 package Pages;
 
+import Base.BaseTest;
+import TestData.TestData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage{
-    WebDriver driver;
-    WebElement newUserButton;
+import static TestData.TestData.PASSWORD;
+import static TestData.TestData.USERNAME;
 
-    public LoginPage(WebDriver driver){
-        this.driver=driver;
+public class LoginPage extends BaseTest {
+
+    public LoginPage(){
+        PageFactory.initElements(driver,this);
     }
 
-    public WebElement getNewUserButton() {
-        return driver.findElement(By.id("newUser"));
-    }
+    @FindBy(id = "newUser")
+    public WebElement getNewUserButton;
+
+    @FindBy(id="userName")
+    public WebElement getUserNameField;
+
+    @FindBy(id="password")
+    public WebElement getPasswordField;
+
+    @FindBy(id="login")
+    public WebElement getLoginButton;
+
     //-----------
     public void clickOnNewUserButton(){
-        getNewUserButton().click();
+       getNewUserButton.click();
+    }
+    public void fillInLoginForm(){
+        getUserNameField.clear();
+        getUserNameField.sendKeys(USERNAME);
+        getPasswordField.clear();
+        getPasswordField.sendKeys(PASSWORD);
+
+
     }
 }

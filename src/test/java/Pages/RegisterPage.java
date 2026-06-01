@@ -1,47 +1,44 @@
 package Pages;
 
+import Base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class RegisterPage {
-    WebDriver driver;
-    WebElement firstName;
-    WebElement lastName;
-    WebElement userName;
-    WebElement password;
-    WebElement registerButton;
+import static TestData.TestData.*;
 
-    public RegisterPage(WebDriver driver) {
-        this.driver = driver;
+public class RegisterPage extends BaseTest {
+
+    public RegisterPage(){
+        PageFactory.initElements(driver,this);
     }
 
-    public WebElement getRegisterButton() {
-        return registerButton;
-    }
+    @FindBy(id = "firstname")
+    public WebElement firstNameField;
 
-    public WebElement getPassword() {
-        return password;
-    }
+    @FindBy(id = "lastname")
+    public WebElement lastNameField;
 
-    public WebElement getUserName() {
-        return userName;
-    }
+    @FindBy(id="userName")
+    public WebElement userNameField;
 
-    public WebElement getLastName() {
-        return lastName;
-    }
+    @FindBy(id="password")
+    public WebElement password;
 
-    public WebElement getFirstName() {
-        return firstName;
-    }
-    //--------
+    @FindBy(id="register")
+    public WebElement registerButton;
+
+    //----------------
+
     public void fillInRegistrationForm(){
-        getFirstName().clear();
-        getFirstName().sendKeys("Maja");
-        getLastName().clear();
-        getLastName().sendKeys("Dumitrov");
-        getUserName().clear();
-        getUserName().sendKeys();
-
+        firstNameField.clear();
+        firstNameField.sendKeys(FIRSTNAME);
+        lastNameField.clear();
+        lastNameField.sendKeys(LASTNAME);
+        userNameField.clear();
+        userNameField.sendKeys(USERNAME);
+        password.clear();
+        password.sendKeys(PASSWORD);
     }
 }

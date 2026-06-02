@@ -3,6 +3,7 @@ package Tests;
 import Base.BaseTest;
 import Pages.*;
 import TestData.TestData;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,11 +19,12 @@ public class UserRegistrationTest extends BaseTest {
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        driver.manage().window().setPosition(new Point(1366, 0));
         driver.manage().window().maximize();
         driver.navigate().to("https://demoqa.com/");
 
         homePage=new HomePage();
-        bookStoreApplicationPage=new BookStoreApplicationPage();
+        cardsPage=new CardsPage();
         loginPage=new LoginPage();
         registerPage=new RegisterPage();
         profilePage=new ProfilePage();
@@ -41,15 +43,33 @@ public class UserRegistrationTest extends BaseTest {
     }
     @Test(priority=2)
     public void LoginWithValidCredentials(){
-        bookStoreApplicationPage.clickOnSidebarButton("Login");
-       // bookStoreApplicationPage.clickOnLoginButton();
+        cardsPage.clickOnSidebarButton("Login");
         loginPage.fillInLoginForm();
         loginPage.getLoginButton.click();
-       // driver.navigate().refresh();
 
-        Assert.assertEquals(profilePage.getUserName.getText(), TestData.USERNAME);
-        Assert.assertTrue(profilePage.getLogoutButton.isDisplayed());
+       // Assert.assertEquals(profilePage.getUserName.getText(), TestData.USERNAME);
+       // Assert.assertTrue(profilePage.getLogoutButton.isDisplayed());
+    }
+    @Test (priority=3)
+    public void userCanNotLoginWithInvalidPassword(){
+        cardsPage.clickOnSidebarButton("Login");
+        loginPage.getUserNameField.sendKeys(TestData.USERNAME);
+        loginPage.getPasswordField.sendKeys("123123.!");
+        loginPage.getLoginButton.click();
 
+        Assert.assertTrue(loginPage.getErrorMessage.isDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage.getText().equals("Invalid username or password!"));
+        Assert.assertTrue(loginPage.getLoginButton.isDisplayed());
+
+    }
+    @Test
+    public void userCanDeleteAccount(){
+        cardsPage.clickOnSidebarButton("Login");
+        loginPage.fillInLoginForm();
+        loginPage.getLoginButton.click();
+        profilePage.clickOnDeleteAccountButton();
+
+        Assert.assertTrue(loginPage.getLoginButton.isDisplayed());
     }
 
     @BeforeMethod

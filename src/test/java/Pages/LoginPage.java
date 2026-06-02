@@ -30,6 +30,9 @@ public class LoginPage extends BaseTest {
     @FindBy(id="login")
     public WebElement getLoginButton;
 
+    @FindBy(id="output")
+    public WebElement getErrorMessage;
+
     //-----------
     public void clickOnNewUserButton(){
        getNewUserButton.click();

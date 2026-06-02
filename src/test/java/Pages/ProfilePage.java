@@ -18,8 +18,16 @@ public class ProfilePage extends BaseTest {
     @FindBy(css="span[title='Delete']")
     public WebElement getDeleteBookIcon;
 
+    @FindBy(xpath = "//*[@id=\"submit\"]")
+    public WebElement getDeleteAccountButton;
+
     //-----------------------------------
     public void clickOnDeleteBookIcon(){
         getDeleteBookIcon.click();
     }
+    public void clickOnDeleteAccountButton(){
+        getDeleteAccountButton.click();
+    }
+
+
 }

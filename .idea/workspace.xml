@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6d337f6-86a9-45db-b042-4b397498fb92" name="Changes" comment="Add initial project classes">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BookStoreApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/BookStoreApplicationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BookStoreApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CardsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestData/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestData/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddingAndDeletingBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddingAndDeletingBookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BookStoreApplicationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestData/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestData/TestData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AddingAndDeletingBookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AddingAndDeletingBookTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/UserRegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/UserRegistrationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +59,12 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "TestNG.AddingAndDeletingBookTest.addingBookToCollection.executor": "Run",
     "TestNG.AddingAndDeletingBookTest.deletingABook.executor": "Run",
+    "TestNG.TextBoxTest.TextBoxFormWorkingProperly.executor": "Run",
     "TestNG.UserRegistrationTest.LoginWithValidCredentials.executor": "Run",
     "TestNG.UserRegistrationTest.UserRegistration.executor": "Run",
     "TestNG.UserRegistrationTest.executor": "Run",
+    "TestNG.UserRegistrationTest.userCanDeleteAccount.executor": "Run",
+    "TestNG.UserRegistrationTest.userCanNotLoginWithInvalidPassword.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -61,25 +72,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddingAndDeletingBookTest.deletingABook">
-    <configuration name="AddingAndDeletingBookTest.addingBookToCollection" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FinalProjectDemoqa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddingAndDeletingBookTest" />
-      <option name="METHOD_NAME" value="addingBookToCollection" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.TextBoxTest.TextBoxFormWorkingProperly">
     <configuration name="AddingAndDeletingBookTest.deletingABook" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
@@ -98,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TextBoxTest.TextBoxFormWorkingProperly" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -107,8 +100,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TextBoxTest" />
+      <option name="METHOD_NAME" value="TextBoxFormWorkingProperly" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.UserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRegistrationTest.userCanDeleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +137,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
-      <option name="METHOD_NAME" value="UserRegistration" />
+      <option name="METHOD_NAME" value="userCanDeleteAccount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegistrationTest.userCanNotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProjectDemoqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
+      <option name="METHOD_NAME" value="userCanNotLoginWithInvalidPassword" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddingAndDeletingBookTest.deletingABook" />
-        <item itemvalue="TestNG.AddingAndDeletingBookTest.addingBookToCollection" />
+        <item itemvalue="TestNG.TextBoxTest.TextBoxFormWorkingProperly" />
         <item itemvalue="TestNG.UserRegistrationTest.LoginWithValidCredentials" />
-        <item itemvalue="TestNG.UserRegistrationTest" />
-        <item itemvalue="TestNG.UserRegistrationTest.UserRegistration" />
+        <item itemvalue="TestNG.UserRegistrationTest.userCanNotLoginWithInvalidPassword" />
+        <item itemvalue="TestNG.UserRegistrationTest.userCanDeleteAccount" />
+        <item itemvalue="TestNG.AddingAndDeletingBookTest.deletingABook" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +188,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780077294861</updated>
-      <workItem from="1780077301535" duration="33846000" />
+      <workItem from="1780077301535" duration="47999000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project classes">
       <option name="closed" value="true" />

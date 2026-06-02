@@ -3,6 +3,7 @@ package Tests;
 import Base.BaseTest;
 import Pages.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,11 +19,12 @@ public class AddingAndDeletingBookTest extends BaseTest {
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+        driver.manage().window().setPosition(new Point(1366, 0));
         driver.manage().window().maximize();
         driver.navigate().to("https://demoqa.com/login");
 
         loginPage=new LoginPage();
-        bookStoreApplicationPage=new BookStoreApplicationPage();
+        cardsPage=new CardsPage();
         booksPage=new BooksPage();
         bookDetailsPage=new BookDetailsPage();
         homePage=new HomePage();
@@ -33,14 +35,14 @@ public class AddingAndDeletingBookTest extends BaseTest {
     }
     @Test(priority = 1)
     public void addingBookToCollection() throws InterruptedException {
-        bookStoreApplicationPage.clickOnSidebarButton("Book Store");
-       scrollToElement(booksPage.getGitPocketGuideBook);
+        cardsPage.clickOnSidebarButton("Book Store");
+        scrollToElement(booksPage.getGitPocketGuideBook);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Git Pocket Guide")));
 
         booksPage.clickOnGitPocketGuideBook();
         bookDetailsPage.clickOnAddToYourCollectionButton();
 
-        bookStoreApplicationPage.clickOnSidebarButton("Profile");
+        cardsPage.clickOnSidebarButton("Profile");
 
         Assert.assertTrue(profilePage.getDeleteBookIcon.isDisplayed());
         Assert.assertTrue(booksPage.getGitPocketGuideBook.isDisplayed());
@@ -49,6 +51,7 @@ public class AddingAndDeletingBookTest extends BaseTest {
     @Test(priority = 2)
     public void deletingABook(){
         profilePage.clickOnDeleteBookIcon();
+        // neka assertacija-----------------------------------------------------
 
     }
 

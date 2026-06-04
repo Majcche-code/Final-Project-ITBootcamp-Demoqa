@@ -3,11 +3,9 @@ package Tests;
 import Base.BaseTest;
 import Pages.CardsPage;
 import Pages.HomePage;
-import Pages.TextBoxFormPage;
-import org.openqa.selenium.By;
+import Pages.SelectablePage;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -16,7 +14,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TextBoxTest extends BaseTest {
+public class InteractionsTest extends BaseTest {
+
     @BeforeMethod
     public void pageSetUp(){
         driver=new ChromeDriver();
@@ -26,22 +25,27 @@ public class TextBoxTest extends BaseTest {
         driver.manage().window().maximize();
         driver.navigate().to("https://demoqa.com");
 
+        selectablePage=new SelectablePage();
         homePage=new HomePage();
         cardsPage=new CardsPage();
-        textBoxFormPage=new TextBoxFormPage();
+
+        homePage.clickOnCard("Interactions");
     }
     @Test
-    public void TextBoxFormWorkingProperly()  {
-        homePage.clickOnCard("Elements");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("router-link")));
-        //wait.until(ExpectedConditions.elementToBeClickable(By.className("router-link")));
-        cardsPage.clickOnSidebarButton("Text Box");
-        textBoxFormPage.fillInTextBoxForm();
-        textBoxFormPage.getSubmitButton.click();
+    public void selectFromSelectableCard() throws InterruptedException {
+        cardsPage.clickOnSidebarButton("Selectable");
+        selectablePage.getFirstField.click();
 
-        Assert.assertTrue(textBoxFormPage.getOutputMessage.isDisplayed());
+        //u promenljivoj smestam atribut elementa
+        String classes=selectablePage.getFirstField.getAttribute("class");
+
+        // provera tacnosti da atribut sadrzi rec active, sto znaci da je polje aktivno-selektovano
+        Assert.assertTrue(classes.contains("active"));
+        selectablePage.getFirstField.click();
+
+        //Assert.assertFalse(classes.contains("active"));  //ideja za proveru da nije aktivno polje-ne radi
+
     }
-
     @AfterMethod
     public void tearDown(){
         driver.quit();

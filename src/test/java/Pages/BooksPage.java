@@ -1,6 +1,7 @@
 package Pages;
 
 import Base.BaseTest;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,7 +16,7 @@ public class BooksPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-   @FindBy(linkText = "Git Pocket Guide")
+   @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[2]/div/span/a")
    public WebElement getGitPocketGuideBook;
 
     //-------------------------------------------
@@ -23,7 +24,7 @@ public class BooksPage extends BaseTest {
     public void clickOnGitPocketGuideBook(){
         scrollToElement(getGitPocketGuideBook);
         wait.until(ExpectedConditions.elementToBeClickable(getGitPocketGuideBook));
-        getGitPocketGuideBook.click();
+        getGitPocketGuideBook.sendKeys(Keys.ENTER);
     }
 
 }

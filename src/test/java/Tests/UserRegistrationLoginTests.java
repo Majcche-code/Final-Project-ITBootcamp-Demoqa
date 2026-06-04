@@ -5,14 +5,16 @@ import Pages.*;
 import TestData.TestData;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class UserRegistrationTest extends BaseTest {
+public class UserRegistrationLoginTests extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp(){
@@ -24,6 +26,7 @@ public class UserRegistrationTest extends BaseTest {
         driver.navigate().to("https://demoqa.com/");
 
         homePage=new HomePage();
+       // booksPage=new BooksPage();
         cardsPage=new CardsPage();
         loginPage=new LoginPage();
         registerPage=new RegisterPage();
@@ -32,25 +35,33 @@ public class UserRegistrationTest extends BaseTest {
         homePage.clickOnCard("Book Store Application");
 
     }
-    @Test (priority = 1)
-    public void UserRegistration(){
-       // bookStoreApplicationPage.getLoginButton.click();
-
+    /*
+    @Test
+    public void UserRegistration() throws InterruptedException {
+        cardsPage.clickOnSidebarButton("Login");
         loginPage.clickOnNewUserButton();
         registerPage.fillInRegistrationForm();
-        registerPage.registerButton.click();
-        driver.navigate().refresh();
+        registerPage.getRegisterButton.click();
+
+        Alert alert = driver.switchTo().alert();
+        System.out.println(alert.getText());
+        alert.accept();
     }
-    @Test(priority=2)
+    // Ne prolazi registracija zbog reCaptcha provere, nalog kreiram rucno
+*/
+    @Test(priority=1)
     public void LoginWithValidCredentials(){
         cardsPage.clickOnSidebarButton("Login");
         loginPage.fillInLoginForm();
-        loginPage.getLoginButton.click();
+        System.out.println(loginPage.getPasswordField.getAttribute("value"));
 
-       // Assert.assertEquals(profilePage.getUserName.getText(), TestData.USERNAME);
-       // Assert.assertTrue(profilePage.getLogoutButton.isDisplayed());
+        loginPage.getLoginButton.click();
+        wait.until(ExpectedConditions.visibilityOf(profilePage.getUserName));
+
+        Assert.assertEquals(profilePage.getUserName.getText(), TestData.USERNAME);
+        Assert.assertTrue(profilePage.getLogoutButton.isDisplayed());
     }
-    @Test (priority=3)
+    @Test (priority=2)
     public void userCanNotLoginWithInvalidPassword(){
         cardsPage.clickOnSidebarButton("Login");
         loginPage.getUserNameField.sendKeys(TestData.USERNAME);
@@ -62,8 +73,9 @@ public class UserRegistrationTest extends BaseTest {
         Assert.assertTrue(loginPage.getLoginButton.isDisplayed());
 
     }
-    @Test
-    public void userCanDeleteAccount(){
+    @Test(priority = 3)
+
+    public void userCanDeleteAccount() {
         cardsPage.clickOnSidebarButton("Login");
         loginPage.fillInLoginForm();
         loginPage.getLoginButton.click();
@@ -72,8 +84,8 @@ public class UserRegistrationTest extends BaseTest {
         Assert.assertTrue(loginPage.getLoginButton.isDisplayed());
     }
 
-    @BeforeMethod
+    @AfterMethod
     public void tearDown(){
-       // driver.quit();
+        driver.quit();
     }
 }

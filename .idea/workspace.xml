@@ -7,18 +7,27 @@
     <list default="true" id="c6d337f6-86a9-45db-b042-4b397498fb92" name="Changes" comment="Add initial project classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BookStoreApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CardsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BookDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/BookDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/BooksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CardsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CardsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/TextBoxFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/TextBoxFormPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestData/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestData/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddingAndDeletingBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddingAndDeletingBookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TextBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ElementsCardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/UserRegistrationLoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BookStoreApplicationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BookDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/BookDetailsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BooksPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/BooksPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/RegisterPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestData/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestData/TestData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AddingAndDeletingBookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AddingAndDeletingBookTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/TextBoxTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/UserRegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/UserRegistrationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,13 +67,27 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "TestNG.AddingAndDeletingBookTest.addingBookToCollection.executor": "Run",
+    "TestNG.AddingAndDeletingBookTest.addingBookToCollectiongpt.executor": "Run",
     "TestNG.AddingAndDeletingBookTest.deletingABook.executor": "Run",
+    "TestNG.AddingAndDeletingBookTest.executor": "Run",
+    "TestNG.AlertsFrameWindowCardTests.NewWindowMessageWorkingProperly.executor": "Run",
+    "TestNG.AlertsFrameWindowCardTests.executor": "Run",
+    "TestNG.AlertsFrameWindowCardTests.newTabButtonWorkingProperly.executor": "Run",
+    "TestNG.AlertsFrameWindowCardTests.newWindowButtonWorkingProperly.executor": "Run",
+    "TestNG.ElementsCardTests.TextBoxFormWorkingProperly.executor": "Run",
+    "TestNG.ElementsCardTests.YesRadioButtonWorkingProperly.executor": "Run",
+    "TestNG.FormsCardTests.practiceFormIsWorkingProperly.executor": "Run",
+    "TestNG.InteractionsTest.selectFromSelectableCard.executor": "Run",
     "TestNG.TextBoxTest.TextBoxFormWorkingProperly.executor": "Run",
     "TestNG.UserRegistrationTest.LoginWithValidCredentials.executor": "Run",
     "TestNG.UserRegistrationTest.UserRegistration.executor": "Run",
     "TestNG.UserRegistrationTest.executor": "Run",
     "TestNG.UserRegistrationTest.userCanDeleteAccount.executor": "Run",
     "TestNG.UserRegistrationTest.userCanNotLoginWithInvalidPassword.executor": "Run",
+    "TestNG.WidgetsCardTests.SliderIsWorkingProperly.executor": "Run",
+    "TestNG.WidgetsCardTests.dateAndTimePickerWorkingProperly.executor": "Run",
+    "TestNG.WidgetsCardTests.datePickerIsWorkingProperly.executor": "Run",
+    "TestNG.WidgetsCardTests.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -72,8 +95,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.TextBoxTest.TextBoxFormWorkingProperly">
-    <configuration name="AddingAndDeletingBookTest.deletingABook" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.InteractionsTest.selectFromSelectableCard">
+    <configuration name="AlertsFrameWindowCardTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +105,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddingAndDeletingBookTest" />
-      <option name="METHOD_NAME" value="deletingABook" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AlertsFrameWindowCardTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlertsFrameWindowCardTests.NewWindowMessageWorkingProperly" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProjectDemoqa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AlertsFrameWindowCardTests" />
+      <option name="METHOD_NAME" value="NewWindowMessageWorkingProperly" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextBoxTest.TextBoxFormWorkingProperly" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ElementsCardTests.TextBoxFormWorkingProperly" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -100,7 +140,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TextBoxTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ElementsCardTests" />
       <option name="METHOD_NAME" value="TextBoxFormWorkingProperly" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -109,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.LoginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ElementsCardTests.YesRadioButtonWorkingProperly" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +158,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
-      <option name="METHOD_NAME" value="LoginWithValidCredentials" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ElementsCardTests" />
+      <option name="METHOD_NAME" value="YesRadioButtonWorkingProperly" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.userCanDeleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InteractionsTest.selectFromSelectableCard" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProjectDemoqa" />
       <extension name="coverage">
         <pattern>
@@ -136,26 +176,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
-      <option name="METHOD_NAME" value="userCanDeleteAccount" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRegistrationTest.userCanNotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FinalProjectDemoqa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.UserRegistrationTest" />
-      <option name="METHOD_NAME" value="userCanNotLoginWithInvalidPassword" />
+      <option name="MAIN_CLASS_NAME" value="Tests.InteractionsTest" />
+      <option name="METHOD_NAME" value="selectFromSelectableCard" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TextBoxTest.TextBoxFormWorkingProperly" />
-        <item itemvalue="TestNG.UserRegistrationTest.LoginWithValidCredentials" />
-        <item itemvalue="TestNG.UserRegistrationTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.UserRegistrationTest.userCanDeleteAccount" />
-        <item itemvalue="TestNG.AddingAndDeletingBookTest.deletingABook" />
+        <item itemvalue="TestNG.InteractionsTest.selectFromSelectableCard" />
+        <item itemvalue="TestNG.ElementsCardTests.YesRadioButtonWorkingProperly" />
+        <item itemvalue="TestNG.ElementsCardTests.TextBoxFormWorkingProperly" />
+        <item itemvalue="TestNG.AlertsFrameWindowCardTests" />
+        <item itemvalue="TestNG.AlertsFrameWindowCardTests.NewWindowMessageWorkingProperly" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +210,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780077294861</updated>
-      <workItem from="1780077301535" duration="47999000" />
+      <workItem from="1780077301535" duration="103184000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project classes">
       <option name="closed" value="true" />

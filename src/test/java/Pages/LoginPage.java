@@ -33,16 +33,19 @@ public class LoginPage extends BaseTest {
     @FindBy(id="output")
     public WebElement getErrorMessage;
 
-    //-----------
+    //-----------------------------------------
+
+    //za potrebe testa registracije novog korisnika
     public void clickOnNewUserButton(){
        getNewUserButton.click();
     }
+
+    //popunjavanje forme za login koristeci podatke iz TestData
     public void fillInLoginForm(){
         getUserNameField.clear();
         getUserNameField.sendKeys(USERNAME);
         getPasswordField.clear();
         getPasswordField.sendKeys(PASSWORD);
-
 
     }
 }

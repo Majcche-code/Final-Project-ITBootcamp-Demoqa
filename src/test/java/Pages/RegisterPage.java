@@ -15,30 +15,31 @@ public class RegisterPage extends BaseTest {
     }
 
     @FindBy(id = "firstname")
-    public WebElement firstNameField;
+    public WebElement getFirstNameField;
 
     @FindBy(id = "lastname")
-    public WebElement lastNameField;
+    public WebElement getLastNameField;
 
     @FindBy(id="userName")
-    public WebElement userNameField;
+    public WebElement getUserNameField;
 
     @FindBy(id="password")
-    public WebElement password;
+    public WebElement getPassword;
 
     @FindBy(id="register")
-    public WebElement registerButton;
+    public WebElement getRegisterButton;
 
-    //----------------
+    //----------------------------------------
 
-    public void fillInRegistrationForm(){
-        firstNameField.clear();
-        firstNameField.sendKeys(FIRSTNAME);
-        lastNameField.clear();
-        lastNameField.sendKeys(LASTNAME);
-        userNameField.clear();
-        userNameField.sendKeys(USERNAME);
-        password.clear();
-        password.sendKeys(PASSWORD);
+    //popunjavanje forme za registraciju novog korisnika podacima iz TestData
+    public void fillInRegistrationForm() {
+        getFirstNameField.clear();
+        getFirstNameField.sendKeys(FIRSTNAME);
+        getLastNameField.clear();
+        getLastNameField.sendKeys(LASTNAME);
+        getUserNameField.clear();
+        getUserNameField.sendKeys(USERNAME);
+        getPassword.clear();
+        getPassword.sendKeys(PASSWORD);
     }
 }

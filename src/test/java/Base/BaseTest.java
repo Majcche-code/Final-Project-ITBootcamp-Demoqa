@@ -21,9 +21,15 @@ public class BaseTest {
     public BooksPage booksPage;
     public BookDetailsPage bookDetailsPage;
     public TextBoxFormPage textBoxFormPage;
+    public RadioButtonPage radioButtonPage;
+    public AlertsFrameWindowsPage alertsFrameWindowsPage;
+    public SliderPage sliderPage;
+    public DatePickerPage datePickerPage;
+    public SelectablePage selectablePage;
 
     @BeforeClass
     public void setUp(){
+
         GraphicsEnvironment ge =
                 GraphicsEnvironment.getLocalGraphicsEnvironment();
 
@@ -35,8 +41,10 @@ public class BaseTest {
 
             System.out.println(bounds);
         }
+
         WebDriverManager.chromedriver().setup();
     }
+
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);

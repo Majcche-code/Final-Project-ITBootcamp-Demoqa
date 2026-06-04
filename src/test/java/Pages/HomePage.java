@@ -19,6 +19,8 @@ public class HomePage extends BaseTest{
     public List<WebElement> getCards;
 
     //-------------
+
+    //klikne na prosledjen naziv kartice
     public void clickOnCard(String cardName){
         for(int i=0;i< getCards.size();i++){
             scrollToElement(getCards.get(i));

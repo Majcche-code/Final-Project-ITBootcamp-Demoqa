@@ -2,12 +2,14 @@ package Tests;
 
 import Base.BaseTest;
 import Pages.*;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -36,12 +38,15 @@ public class AddingAndDeletingBookTest extends BaseTest {
     @Test(priority = 1)
     public void addingBookToCollection() throws InterruptedException {
         cardsPage.clickOnSidebarButton("Book Store");
-        scrollToElement(booksPage.getGitPocketGuideBook);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Git Pocket Guide")));
-
+        Thread.sleep(4000);
+        booksPage=new BooksPage();
         booksPage.clickOnGitPocketGuideBook();
+        bookDetailsPage = new BookDetailsPage();  //ponovo inicijalizacija
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("addNewRecordButton")));
         bookDetailsPage.clickOnAddToYourCollectionButton();
 
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert.accept();
         cardsPage.clickOnSidebarButton("Profile");
 
         Assert.assertTrue(profilePage.getDeleteBookIcon.isDisplayed());
@@ -51,8 +56,15 @@ public class AddingAndDeletingBookTest extends BaseTest {
     @Test(priority = 2)
     public void deletingABook(){
         profilePage.clickOnDeleteBookIcon();
-        // neka assertacija-----------------------------------------------------
+        profilePage.clickOnOKButtonConfirmDeleting();
 
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert.accept();
+        Assert.assertFalse(profilePage.addedBookIsPresent());
     }
 
+    @AfterMethod
+    public void tearDown(){
+        //driver.quit();
+    }
 }

@@ -34,6 +34,7 @@ public class TextBoxFormPage extends BaseTest {
 
     //--------------------------------------------------
 
+    //popunjavanje forme podacima iz TestData
     public void fillInTextBoxForm(){
         getFullNameField.clear();
         getFullNameField.sendKeys(TestData.FULLNAME);
